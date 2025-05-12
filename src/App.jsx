@@ -1,4 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MoviesPage from "../pages/Movies.jsx";
+import MovieDetailsPage from "../pages/MovieDetails.jsx";
 
 function App() {
 
@@ -7,8 +9,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<div>Homepage</div>} />
-        <Route path='/movies' element={<div>Movies</div>} />
-        <Route path='/movies/:id' element={<div>Movie Details</div>} />
+        <Route path='/movies' element={<MoviesPage />} />
+        <Route path='/movies/:id' element={<MovieDetailsPage />} />
         <Route path='*' element={<div>404 Not Found</div>} />
       </Routes>
     </BrowserRouter>
