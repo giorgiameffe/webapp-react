@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import ReviewCard from "../components/ReviewCard";
+import StarRating from "../components/StarRating";
 
 function MovieDetailsPage() {
 
@@ -42,7 +43,7 @@ function MovieDetailsPage() {
                 <header className="d-flex justify-content-between align-items-center">
                     <h4 className="mb-4">Reviews</h4>
                     <div>
-                        Average: {movie.reviews_average}
+                        Average rating: <StarRating vote={movie.reviews_average} />
                     </div>
                 </header>
                 {renderReviews()}
