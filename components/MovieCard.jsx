@@ -8,12 +8,12 @@ function MovieCard({ data }) {
     // console.log(reviewsVote);
 
     return (
-        <article className="card">
-            <img src={imagePath} alt={title} className="w-50 h-50 mx-auto img-fluid rounded" />
+        <article className="card container">
+            <img src={imagePath} alt={title} className="w-50 mx-auto rounded" />
             <div className="card-body text-center">
                 <h5 className="card-title">{title}</h5>
                 <p>Director: <strong>{director}</strong></p>
-                <p>Reviews: {reviewsVote}</p>
+                <p>Reviews average: {reviewsVote}</p>
                 <p className="card-text fst-italic">{abstract}</p>
                 <Link to={`/movies/${id}`} className="btn btn-primary">Get more info</Link>
             </div>
