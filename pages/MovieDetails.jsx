@@ -19,10 +19,24 @@ function MovieDetailsPage() {
     useEffect(getMovie, []);
 
     return (
-        <>
-            <div>Movie Details</div>
 
-        </>
+        <article id="movie">
+            <header>
+                {movie ? <div>
+                    <h1>{movie.title}</h1>
+                    <h2>Directed by {movie.director}</h2>
+                    <p>{movie.abstract}</p>
+                </div> : <div>No movie found</div>}
+            </header>
+
+            <hr />
+
+            <section id="reviews">
+                <header>
+                    <h4>Reviews</h4>
+                </header>
+            </section>
+        </article>
     )
 }
 
