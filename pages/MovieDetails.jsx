@@ -21,7 +21,7 @@ function MovieDetailsPage() {
 
     function renderReviews() {
 
-        return movie.reviews?.map(review => <ReviewCard key={review.id} />)
+        return movie.reviews?.map(review => <ReviewCard key={review.id} data={review} />)
 
     }
 
@@ -40,7 +40,7 @@ function MovieDetailsPage() {
 
             <section id="reviews">
                 <header>
-                    <h4>Reviews</h4>
+                    <h4 className="mb-4">Reviews</h4>
                 </header>
                 {renderReviews()}
             </section>
