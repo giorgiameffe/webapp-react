@@ -3,6 +3,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import ReviewCard from "../components/ReviewCard";
 import StarRating from "../components/StarRating";
+import ReviewForm from "../components/ReviewForm";
 
 function MovieDetailsPage() {
 
@@ -23,18 +24,18 @@ function MovieDetailsPage() {
     function renderReviews() {
 
         return movie.reviews?.map(review => <ReviewCard key={review.id} data={review} />)
-
     }
 
     return (
 
         <article id="movie">
             <header>
-                {movie ? <div>
-                    <h1>{movie.title}</h1>
-                    <h2>Directed by {movie.director}</h2>
-                    <p>{movie.abstract}</p>
-                </div> : <div>No movie found</div>}
+                {movie ?
+                    <div>
+                        <h1>{movie.title}</h1>
+                        <h2>Directed by {movie.director}</h2>
+                        <p>{movie.abstract}</p>
+                    </div> : <div>No movie found</div>}
             </header>
 
             <hr />
@@ -46,7 +47,11 @@ function MovieDetailsPage() {
                         Average rating: <StarRating vote={movie.reviews_average} />
                     </div>
                 </header>
-                {renderReviews()}
+                {movie.reviews?.length ? renderReviews() : <div>This movie hasn't reviews</div>}
+            </section>
+
+            <section id="add-reviews">
+                <ReviewForm />
             </section>
         </article>
     )
