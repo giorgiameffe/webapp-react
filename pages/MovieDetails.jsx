@@ -51,7 +51,7 @@ function MovieDetailsPage() {
             </section>
 
             <section id="add-reviews">
-                <ReviewForm />
+                <ReviewForm movieId={id} refreshMovie={getMovie} />
             </section>
         </article>
     )
