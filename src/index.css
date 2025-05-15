@@ -1,0 +1,12 @@
+.img-container {
+    width: 10%;
+}
+
+img {
+    display: block;
+}
+
+.subtitle-movie-detail {
+    font-weight: 400;
+    font-size: 20px;
+}

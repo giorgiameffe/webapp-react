@@ -2,7 +2,7 @@ import StarRating from "./StarRating";
 
 function ReviewCard({ data }) {
 
-    const { text, vote, name } = data
+    const { text, vote, name, } = data
 
     return (
 
