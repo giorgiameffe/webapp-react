@@ -17,7 +17,7 @@ img {
 }
 
 .container-movie-detail {
-    background-color: rgba(164, 90, 255, 0.3);
+    background-color: rgba(124, 58, 206, 0.3);
     border-radius: 20px;
 }
 
@@ -26,6 +26,14 @@ img {
     font-size: 20px;
 }
 
-.card {
+/* Movie Card */
+
+.movie-card {
+    background-color: rgba(164, 90, 255, 0.3);
+}
+
+/* Review Card */
+
+.review-card {
     background-color: rgba(164, 90, 255, 0.3);
 }

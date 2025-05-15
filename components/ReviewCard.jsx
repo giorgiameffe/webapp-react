@@ -6,7 +6,7 @@ function ReviewCard({ data }) {
 
     return (
 
-        <div className="card mb-3">
+        <div className="card review-card mb-3">
             <div className="card-body">
                 <p>{text}</p>
                 <p>Vote: <StarRating vote={vote} /></p>
