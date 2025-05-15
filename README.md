@@ -71,7 +71,7 @@ Rappresentiamo tutti i voti delle recensioni con un componente StarRating.
 
 Per la **MILESTONE 1(BACKEND)** e il **bonus** vi rimando al README della repositoy `webapp-express`.
 
-# Setup Web App React-Day Four
+# Setup Web App React-Day Five
 
 ## Consegna
 
