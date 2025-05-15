@@ -53,7 +53,7 @@ function MoviesPage() {
                         />
                     </div>
                     <div className="col-auto">
-                        <button type="submit" className="btn btn-primary mb-3">Search movie</button>
+                        <button type="submit" className="btn btn-dark mb-3">Search movie</button>
                     </div>
                 </form>
 

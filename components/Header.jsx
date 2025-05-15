@@ -4,15 +4,15 @@ function Header() {
 
     return (
 
-        <header className="bg-info py-3 mb-5">
-            <nav className="container d-flex justify-content-between align-items-center">
-                <div className="text-white">Logo</div>
-                <ul className="d-flex align-items-center list-unstyled gap-5">
+        <header className="container-nav py-3 mb-5">
+            <nav className="container d-flex justify-content-between">
+                <div className="text-white fw-bold">Logo</div>
+                <ul className="d-flex list-unstyled gap-5">
                     <li>
-                        <NavLink className="text-decoration-none text-white" to='/'>Homepage</NavLink>
+                        <NavLink className="text-decoration-none text-white fw-bold" to='/'>Homepage</NavLink>
                     </li>
                     <li>
-                        <NavLink className="text-decoration-none text-white" to='/movies'>Movies</NavLink>
+                        <NavLink className="text-decoration-none text-white fw-bold" to='/movies'>Movies</NavLink>
                     </li>
                 </ul>
             </nav>

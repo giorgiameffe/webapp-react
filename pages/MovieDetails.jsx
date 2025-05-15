@@ -40,20 +40,15 @@ function MovieDetailsPage() {
         <article id="movie">
             <header>
                 {movie ?
-                    <div className="d-flex align-items-center">
+                    <div className="container-movie-detail d-flex align-items-center p-3" >
                         <div className="img-container me-3">
-                            <img src={movie.imagePath} alt={movie.title} className="w-100" />
+                            <img src={movie.imagePath} alt={movie.title} className="w-100 rounded" />
                         </div>
                         <div className="">
                             <h1>{movie.title}</h1>
                             <h2 className="subtitle-movie-detail fst-italic">Directed by {movie.director}</h2>
                             <p>{movie.abstract}</p>
                         </div>
-                        {/* <div>
-                            <h1>{movie.title}</h1>
-                            <h2>Directed by {movie.director}</h2>
-                            <p>{movie.abstract}</p>
-                        </div> */}
                     </div> : <div>No movie found</div>}
             </header>
 

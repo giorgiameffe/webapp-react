@@ -1,12 +1,31 @@
-.img-container {
-    width: 10%;
-}
+/* Reset */
 
 img {
     display: block;
 }
 
+/* Navbar */
+
+.container-nav {
+    background-color: rgb(42, 22, 60);
+}
+
+/* Movie Detail */
+
+.img-container {
+    width: 10%;
+}
+
+.container-movie-detail {
+    background-color: rgba(164, 90, 255, 0.3);
+    border-radius: 20px;
+}
+
 .subtitle-movie-detail {
     font-weight: 400;
     font-size: 20px;
+}
+
+.card {
+    background-color: rgba(164, 90, 255, 0.3);
 }
