@@ -70,3 +70,16 @@ Rappresentiamo tutti i voti delle recensioni con un componente StarRating.
 - All’invio del form, la nuova recensione viene salvata sul database e visualizzata nella pagina, in fondo alle altre.
 
 Per la **MILESTONE 1(BACKEND)** e il **bonus** vi rimando al README della repositoy `webapp-express`.
+
+# Setup Web App React-Day Four
+
+## Consegna
+
+- Concludiamo migliorando l’esperienza sulla nostra SPA, inserendo un loader;
+- Creiamo un componente loader;
+- Questo componente deve poter apparire su qualunque pagina della nostra app;
+- Creiamo e sfruttiamo un Context per dare la possibilità ad ogni componente di attivare o disattivare il loader sulla propria pagina.
+
+### Bonus
+
+Personalizziamo l’aspetto della nostra app col CSS.
