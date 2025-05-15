@@ -7,9 +7,7 @@ function MovieCard({ data }) {
 
     return (
         <article className="card container movie-card">
-            <div>
-                <img src={imagePath} alt={title} className="w-50 mx-auto rounded" />
-            </div>
+            <img src={imagePath} alt={title} className="w-50 mx-auto rounded" />
             <div className="card-body text-center">
                 <h5 className="card-title">{title}</h5>
                 <p>Director: <strong>{director}</strong></p>

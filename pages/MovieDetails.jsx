@@ -61,7 +61,7 @@ function MovieDetailsPage() {
                         Average rating: <StarRating vote={movie.reviews_average} />
                     </div>
                 </header>
-                {movie.reviews?.length ? renderReviews() : <div>This movie hasn't reviews</div>}
+                {movie.reviews?.length ? renderReviews() : <div className="no-review p-3 mb-3 fst-italic fw-bold">This movie hasn't reviews, add a new one!</div>}
             </section>
 
             <section id="add-reviews">

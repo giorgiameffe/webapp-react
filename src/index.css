@@ -37,3 +37,14 @@ img {
 .review-card {
     background-color: rgba(164, 90, 255, 0.3);
 }
+
+/* Movie no review */
+
+.no-review {
+    background-color: rgba(239, 82, 82, 0.3);
+    border-radius: 20px;
+}
+
+.not-found {
+    flex-direction: column;
+}

@@ -8,9 +8,9 @@ function Header() {
             <nav className="container d-flex justify-content-between">
                 <div className="text-white fw-bold">Logo</div>
                 <ul className="d-flex list-unstyled gap-5">
-                    <li>
+                    {/* <li>
                         <NavLink className="text-decoration-none text-white fw-bold" to='/'>Homepage</NavLink>
-                    </li>
+                    </li> */}
                     <li>
                         <NavLink className="text-decoration-none text-white fw-bold" to='/movies'>Movies</NavLink>
                     </li>
