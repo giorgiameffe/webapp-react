@@ -2,15 +2,15 @@ import StarRating from "./StarRating";
 
 function ReviewCard({ data }) {
 
-    const { text, vote, name, } = data
+    const { text, vote, name, } = data;
 
     return (
 
         <div className="card review-card mb-3">
             <div className="card-body">
-                <p>{text}</p>
-                <p>Vote: <StarRating vote={vote} /></p>
-                <p>By {name}</p>
+                <p className="fst-italic fs-4">{text}</p>
+                <p className="fw-bold">Vote: <StarRating vote={vote} /></p>
+                <p className="fst-italic">By {name}</p>
             </div>
         </div>
     )
