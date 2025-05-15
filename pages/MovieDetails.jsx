@@ -5,6 +5,9 @@ import ReviewCard from "../components/ReviewCard";
 import StarRating from "../components/StarRating";
 import ReviewForm from "../components/ReviewForm";
 
+import { useContext } from "react";
+import GlobalContext from "../contexts/GlobalContext";
+
 function MovieDetailsPage() {
 
     const { id } = useParams();
@@ -13,10 +16,16 @@ function MovieDetailsPage() {
 
     const [movie, setMovie] = useState({});
 
+    const { setIsLoading } = useContext(GlobalContext);
+
     function getMovie() {
+
+        setIsLoading(true);
+
         axios.get(`${url}/${id}`)
             .then(response => setMovie(response.data))
             .catch(err => console.log(err))
+            .finally(() => setIsLoading(false));
     }
 
     useEffect(getMovie, []);
