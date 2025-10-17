@@ -4,10 +4,97 @@ img {
     display: block;
 }
 
-/* Navbar */
+body {
+    overflow-x: hidden;
+}
+
+/* Homepage */
 
 .container-nav {
-    background-color: rgb(42, 22, 60);
+    background-color: #0b0b0b;
+    color: #ffffff;
+}
+
+.home-container {
+    background: url('/src/assets/movies-home.jpg') center/cover no-repeat;
+    min-height: 90vh;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay-content {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+}
+
+/* Bottoni stile */
+
+.btn-movies {
+    background-color: #FFD700;
+    border: none;
+    border-radius: 1.5rem;
+}
+
+.btn-movies:hover {
+    background-color: #C39F00;
+    transition: 0.5s ease-in-out;
+}
+
+/* Movies */
+
+/* Sfondo della pagina */
+.movies-page {
+    background: url('/src/assets/cinema-seats.jpg') center/cover no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+.movie-search-input {
+    border-radius: 1.5rem;
+}
+
+.movie-search-input:hover {
+    background-color: #c3c2c2;
+    transition: 0.5s ease-in-out;
+}
+
+/* Card styling */
+
+.movie-card {
+    background-color: rgba(7, 7, 7, 0.8);
+    border-radius: 0.8rem;
+    padding: 1rem;
+    color: white;
+    min-width: 250px;
+    max-width: 300px;
+    transition: transform 0.2s, box-shadow 0.5s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    cursor: pointer;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(82, 79, 13, 0.5);
+}
+
+.movie-card .card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.movie-card img {
+    max-height: 250px;
+    object-fit: cover;
 }
 
 /* Movie Detail */
@@ -24,12 +111,6 @@ img {
 .subtitle-movie-detail {
     font-weight: 400;
     font-size: 20px;
-}
-
-/* Movie Card */
-
-.movie-card {
-    background-color: rgba(164, 90, 255, 0.3);
 }
 
 /* Review Card */
