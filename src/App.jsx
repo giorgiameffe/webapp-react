@@ -5,6 +5,7 @@ import DefaultLayout from "../layouts/DefaultLayout.jsx";
 import GlobalContext from "../contexts/GlobalContext.js";
 import { useState } from "react";
 import NotFound from '../components/NotFound.jsx';
+import Homepage from "../pages/Homepage.jsx";
 
 function App() {
 
@@ -19,7 +20,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<DefaultLayout />}>
-            {/* <Route path='/' element={<div>Homepage</div>} /> */}
+            <Route path='/' element={<Homepage />} />
             <Route path='/movies' element={<MoviesPage />} />
             <Route path='/movies/:id' element={<MovieDetailsPage />} />
           </Route>
