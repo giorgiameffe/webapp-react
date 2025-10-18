@@ -6,6 +6,7 @@ import GlobalContext from "../contexts/GlobalContext.js";
 import { useState } from "react";
 import NotFound from '../components/NotFound.jsx';
 import Homepage from "../pages/Homepage.jsx";
+import AddMoviePage from "../pages/AddMoviePage.jsx";
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
             <Route path='/' element={<Homepage />} />
             <Route path='/movies' element={<MoviesPage />} />
             <Route path='/movies/:id' element={<MovieDetailsPage />} />
+            <Route path="/movies/new" element={<AddMoviePage />} />
           </Route>
           <Route path='*' element={<NotFound />} />
         </Routes>
