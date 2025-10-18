@@ -1,5 +1,11 @@
 /* Reset */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 img {
     display: block;
 }
@@ -8,9 +14,30 @@ body {
     overflow-x: hidden;
 }
 
+.logo {
+    max-width: 120px;
+}
+
+.yellow-color {
+    color: #FFD700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.navbar {
+    font-family: "Playfair Display", serif;
+}
+
+.playfair {
+    font-family: "Playfair Display", serif;
+}
+
 /* Homepage */
 
-.container-nav {
+.header-main {
     background-color: #0b0b0b;
     color: #ffffff;
 }
@@ -31,6 +58,7 @@ body {
     text-align: center;
     color: white;
     border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 217, 0, 0.273);
 }
 
 /* Bottoni stile */
@@ -39,6 +67,7 @@ body {
     background-color: #FFD700;
     border: none;
     border-radius: 1.5rem;
+    color: #0b0b0b;
 }
 
 .btn-movies:hover {
@@ -49,7 +78,8 @@ body {
 /* Movies */
 
 /* Sfondo della pagina */
-.movies-page {
+
+.seats-background {
     background: url('/src/assets/cinema-seats.jpg') center/cover no-repeat;
     width: 100%;
     min-height: 100vh;
@@ -104,19 +134,43 @@ body {
 }
 
 .container-movie-detail {
-    background-color: rgba(124, 58, 206, 0.3);
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 20px;
+    color: #f5f5f5;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.1);
+}
+
+.container-movie-detail h1 {
+    color: #FFD700;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .subtitle-movie-detail {
+    color: #ccc;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.container-movie-detail p {
+    color: #797676;
 }
 
 /* Review Card */
 
+#reviews h4 {
+    color: #FFD700;
+}
+
 .review-card {
-    background-color: rgba(164, 90, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0);
+    color: #f5f5f5;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
 }
 
 /* Movie no review */
@@ -128,4 +182,86 @@ body {
 
 .not-found {
     flex-direction: column;
+}
+
+.review-form {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-header {
+    text-shadow: 0px 1px 5px rgba(242, 242, 7, 0.7);
+    color: #f2f2f2;
+}
+
+.form-label {
+    color: #f5f5f5;
+}
+
+/* form */
+
+.form-data {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
+}
+
+.form-title {
+    color: #FFD700;
+}
+
+/* Footer */
+
+.footer {
+    background-color: #0b0b0b;
+    background-size: cover;
+    background-position: center;
+}
+
+.link {
+    color: #f2f2f2;
+}
+
+.link:hover {
+    color: #FFD700;
+    transition: 0.5s ease-in;
+}
+
+.footer-socials {
+    background-color: white;
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.x-icon {
+    color: #000000;
+    font-size: 1.6rem;
+}
+
+.ig-icon {
+    color: #E4405F;
+    font-size: 1.6rem;
+}
+
+.fb-icon {
+    color: #1877F2;
+    font-size: 1.6rem;
+}
+
+/* NotFound */
+
+.not-found {
+    background-image: url(../src/assets/cinema-seats.jpg);
+    width: 100%;
+    min-height: 100vh;
+}
+
+.not-found-container {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
 }

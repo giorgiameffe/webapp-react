@@ -11,11 +11,11 @@ function MovieCard({ data }) {
             <img src={imagePath} alt={title} className="w-50 mx-auto mt-3 rounded" />
             <div className="card-body text-center d-flex flex-column flex-grow-1">
                 <h5 className="card-title">{title}</h5>
-                <p>Director: <strong>{director}</strong></p>
+                <p className="playfair">Director: <strong>{director}</strong></p>
                 <p>Average rating: <StarRating vote={reviews_vote} /></p>
                 <p className="card-text fst-italic flex-grow-1">{abstract}</p>
                 <div className="mt-auto">
-                    <Link to={`/movies/${slug}`} className="btn btn-movies p-2 text-dark">Get more info</Link>
+                    <Link to={`/movies/${slug}`} className="btn btn-movies p-2 pe-5 ps-5 text-dark">Get more info</Link>
                 </div>
             </div>
         </article>

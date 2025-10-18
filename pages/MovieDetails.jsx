@@ -37,36 +37,38 @@ function MovieDetailsPage() {
 
     return (
 
-        <article id="movie">
-            <header>
-                {movie ?
-                    <div className="container-movie-detail d-flex align-items-center p-3" >
-                        <div className="img-container me-3">
-                            <img src={movie.imagePath} alt={movie.title} className="w-100 rounded" />
-                        </div>
-                        <div className="">
-                            <h1>{movie.title}</h1>
-                            <h2 className="subtitle-movie-detail fst-italic">Directed by {movie.director}</h2>
-                            <p>{movie.abstract}</p>
-                        </div>
-                    </div> : <div>No movie found</div>}
-            </header>
-
-            <hr />
-
-            <section id="reviews">
-                <header className="d-flex justify-content-between align-items-center">
-                    <h4 className="mb-4 fs-2">Reviews</h4>
-                    <div className="fw-bold">
-                        Average rating: <StarRating vote={movie.reviews_average} />
-                    </div>
+        <article id="movie" className="seats-background">
+            <div className="container pt-5">
+                <header>
+                    {movie ?
+                        <div className="container-movie-detail d-flex align-items-center p-3" >
+                            <div className="img-container me-3">
+                                <img src={movie.imagePath} alt={movie.title} className="w-100 rounded" />
+                            </div>
+                            <div>
+                                <h1>{movie.title}</h1>
+                                <h2 className="subtitle-movie-detail">Directed by {movie.director}</h2>
+                                <p>{movie.abstract}</p>
+                            </div>
+                        </div> : <div>No movie found</div>}
                 </header>
-                {movie.reviews?.length ? renderReviews() : <div className="no-review p-3 mb-3 fst-italic fw-bold">This movie hasn't reviews, add a new one!</div>}
-            </section>
 
-            <section id="add-reviews">
-                <ReviewForm movieId={id} refreshMovie={getMovie} />
-            </section>
+                <hr />
+
+                <section id="reviews">
+                    <header className="d-flex justify-content-between align-items-center">
+                        <h4 className="mb-4 fs-2">Reviews</h4>
+                        <div className="fw-bold text-white">
+                            Average rating: <StarRating vote={movie.reviews_average} />
+                        </div>
+                    </header>
+                    {movie.reviews?.length ? renderReviews() : <div className="no-review p-3 mb-3 fst-italic fw-bold">This movie hasn't reviews, add a new one!</div>}
+                </section>
+
+                <section id="add-reviews">
+                    <ReviewForm movieId={id} refreshMovie={getMovie} />
+                </section>
+            </div>
         </article>
     )
 }

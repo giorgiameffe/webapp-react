@@ -45,11 +45,11 @@ function ReviewForm({ movieId, refreshMovie }) {
     return (
 
         <>
-            <div className="card p-3 mb-4 text-primary-emphasis bg-dark-subtle border border-primary-subtle rounded-3">
-                <div className="card-header fw-bold">
+            <div className="review-form card p-3 mb-4 rounded-4">
+                <h5 className="card-header fw-bold">
                     Write a review for this movie
-                </div>
-                <div className="card-body">
+                </h5>
+                <div className="card-body rounded-3">
                     <form onSubmit={submitData}>
                         <div className="mb-3">
                             <label htmlFor="review-name" className="form-label fw-bold">Your name</label>
@@ -63,12 +63,14 @@ function ReviewForm({ movieId, refreshMovie }) {
                             <label htmlFor="review-vote" className="form-label fw-bold">Your vote</label>
                             <input type="number" min={1} max={5} className="form-control" id="review-vote" value={formData.vote} name="vote" onChange={handleFormData} />
                         </div>
-                        <button type="submit" className="btn btn-dark">Add review</button>
+                        <div className="d-flex justify-content-center pt-3">
+                            <button type="submit" className="btn btn-movies p-2 pe-5 ps-5">Add review</button>
+                        </div>
                     </form>
                 </div>
             </div>
-            <div>
-                <Link to={'/movies'} className="btn btn-dark text-white">Go back to movies</Link>
+            <div className="d-flex">
+                <Link to={'/movies'} className="btn btn-movies p-2 pe-4 ps-4 mb-5 ms-auto">Go back to movies</Link>
             </div>
         </>
     )
