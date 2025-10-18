@@ -64,7 +64,7 @@ function AddMoviePage() {
                 <h1 className="form-title mt-5 text-center">Share a new movie</h1>
                 <section id="add-movie" className="d-flex justify-content-center mt-5">
 
-                    <form onSubmit={handleSubmit} className="form-data w-50 p-4 mb-5">
+                    <form onSubmit={handleSubmit} className="form-data p-4 mb-5">
 
                         {/* Titolo */}
                         <label htmlFor="movie-title" className="form-label fw-bold">Title</label>

@@ -1,35 +1,49 @@
-import { NavLink } from "react-router-dom";
 import logo from "../src/assets/logo.png";
-import { faHome } from "@fortawesome/free-regular-svg-icons";
-import { faFilm } from "@fortawesome/free-solid-svg-icons";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Navbar from "./Navbar";
+import { useState } from "react";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 function Header() {
+
+    const [isOpen, setIsOpen] = useState(false);
+
+    function handleToggle() {
+
+        setIsOpen(prev => !prev);
+    }
 
     return (
 
         <header className="header-main d-flex align-items-center justify-content-between pe-4">
-            <img src={logo} alt="logo" className="logo img-fluid" />
-            <nav className="navbar navbar-expand-lg">
-                <ul className="d-flex align-items-center list-unstyled gap-4 mb-0">
-                    <li>
-                        <NavLink className="text-decoration-none text-white fw-bold" to='/'>
-                            <FontAwesomeIcon icon={faHome} /> Home
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink className="text-decoration-none text-white fw-bold" to='/movies'>
-                            <FontAwesomeIcon icon={faFilm} /> Movies
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink className="text-decoration-none text-white fw-bold" to='/movies/new'>
-                            <FontAwesomeIcon icon={faPlus} /> Add new movie
-                        </NavLink>
-                    </li>
-                </ul>
-            </nav>
+            <img src={logo} alt="logo" className="logo img-fluid ms-4" />
+
+            <div>
+
+                {/* Bottone hamburger */}
+                <button
+                    className="hamburger-menu"
+                    aria-label={isOpen ? "Chiudi menu" : "Apri menu"}
+                    onClick={handleToggle}
+                >
+                    <FontAwesomeIcon icon={faBars} className="close-menu" />
+                </button>
+
+                {/* Overlay mobile */}
+                <div className="desktop-menu">
+                    <Navbar className="desktop-nav me-4" />
+                </div>
+
+                {isOpen && (
+                    <div className="mobile-menu-overlay">
+                        <button className="close-menu" onClick={handleToggle}>
+                            <FontAwesomeIcon icon={faTimes} className="x-icon" />
+                        </button>
+                        <Navbar className="mobile-nav" onToggle={handleToggle} />
+                    </div>
+                )}
+
+            </div>
         </header>
 
     )

@@ -30,7 +30,7 @@ function MoviesPage() {
         <div className="seats-background movies-page">
             <div className="container position-relative py-5 content-wrapper">
                 <form onSubmit={searchMovies} className="d-flex mb-5 search-container container">
-                    <div className="d-flex justify-content-between w-100 align-items-center">
+                    <div className="movies-form-wrapper d-flex justify-content-between w-100 align-items-center">
 
                         {/* Sinistra: input + bottone */}
                         <div className="d-flex">
@@ -41,7 +41,7 @@ function MoviesPage() {
                                 value={search}
                                 onChange={e => setSearch(e.target.value)}
                             />
-                            <button type="submit" className="btn btn-movies pe-4 ps-4">
+                            <button type="submit" className="btn btn-movies p-2 pe-4 ps-4">
                                 Search
                             </button>
                         </div>
@@ -49,7 +49,7 @@ function MoviesPage() {
                         {/* Destra: link */}
                         <Link
                             to="/movies/new"
-                            className="btn btn-movies p-2 pe-4 ps-4"
+                            className="btn btn-movies mt-2 mt-md-0 p-2 pe-4 ps-4"
                             alt="Aggiungi un nuovo film"
                         >
                             Add new movie

@@ -16,14 +16,15 @@ function Footer() {
                     </div>
                 </div>
                 <div className="row">
+
                     {/* Link Utili - Sinistra su desktop, sotto a sinistra su mobile/tablet */}
                     <div className="col-6 col-lg-4 order-2 order-lg-0 text-center text-lg-start d-flex flex-column align-items-center">
                         <h5 className="fw-bold font-medieval">Link Utili</h5>
                         <ul className="list-unstyled d-flex flex-column align-items-center">
-                            <li><NavLink className="text-decoration-none link" to="/">Home</NavLink></li>
-                            <li><NavLink className="text-decoration-none link" to="/movies">Movies</NavLink></li>
-                            <li><NavLink className="text-decoration-none link" to="/movies/new">Add movie</NavLink></li>
-                            <li><NavLink className="text-decoration-none link">Contatti</NavLink></li>
+                            <li><NavLink className="text-decoration-none links" to="/">Home</NavLink></li>
+                            <li><NavLink className="text-decoration-none links" to="/movies">Movies</NavLink></li>
+                            <li><NavLink className="text-decoration-none links" to="/movies/new">Add movie</NavLink></li>
+                            <li><NavLink className="text-decoration-none links">Contatti</NavLink></li>
                         </ul>
                     </div>
 
@@ -53,7 +54,6 @@ function Footer() {
                         </ul>
                     </div>
                 </div>
-
 
                 <div className="row">
                     <div className="col text-center mt-3 fst-italic">
