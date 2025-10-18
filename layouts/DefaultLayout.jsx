@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import Loader from "../components/Loader";
 import GlobalContext from "../contexts/GlobalContext";
 import { useContext } from "react";
+import Footer from "../components/Footer";
 
 function DefaultLayout() {
 
@@ -14,6 +15,7 @@ function DefaultLayout() {
             <main className="container-main">
                 <Outlet />
             </main>
+            <Footer />
             {isLoading && <Loader />}
         </>
     )
