@@ -60,7 +60,7 @@ function MoviesPage() {
 
                 <section className="row g-3">
                     {movies.length ? movies.map(movie => (
-                        <div className="col-md-4 d-flex aling-items-stretch" key={movie.id}>
+                        <div className="col-lg-4 col-md-6 col-sm-12 d-flex aling-items-stretch" key={movie.id}>
                             <MovieCard data={movie} />
                         </div>
                     )) : <div className="text-white">No items found</div>}

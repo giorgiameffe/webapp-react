@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Navbar from "./Navbar";
 import { useState } from "react";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 function Header() {
 
@@ -16,10 +17,12 @@ function Header() {
     return (
 
         <header className="header-main d-flex align-items-center justify-content-between pe-4">
-            <img src={logo} alt="logo" className="logo img-fluid ms-4" />
+
+            <Link to="/">
+                <img src={logo} alt="logo" className="logo img-fluid ms-4" />
+            </Link>
 
             <div>
-
                 {/* Bottone hamburger */}
                 <button
                     className="hamburger-menu"
