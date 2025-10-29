@@ -1,85 +1,125 @@
-# Setup Web App React-Day Two
-
-Essendo un progetto sviluppato sia lato front-end che back-end, il **Day One** viene illustrato nel README della repository `webapp-express`.
-
-## Consegna
-
-Ora è il momento di prepararci al frontend della nostra Web App!
-
-### MILESTONE 1
-- Mettiamo su un nuovo progetto React aiutandoci con Vite;
-- Ripuliamo come sempre l’app da file e codice di esempio non necessari;
-- Installiamo il necessario: React Router, Axios e Bootstrap (se volete utilizzarlo).
-
-### MILESTONE 2
-
-- Creiamo un layout di base per la nostra applicazione ed impostiamo le rotte per le diverse pagine.
-- Creiamo 2 pagine:
-  - La home, in cui mostreremo la lista dei film;
-  - La pagina di dettaglio di un singolo film.
-
-### MILESTONE 3
-
-- Configuriamo l’app di backend (repo webapp-express) a ricevere chiamate dalla nostra applicazione React, installando e impostando il middleware CORS;
-- Proviamo quindi ad effettuare una chiamata Ajax dalla home del progetto React, per ottenere la lista dei libri.
-
-#### Bonus
-
-- Impostare la struttura del lavoro in maniera da sfruttare la riutailizzabilità dei componenti React e le loro props!
-- Aggiungere, nella pagina dei film, un campo per cercare su tutti i campi utili del db (es. titolo, abstract);
-- Curare l’aspetto estetico della vostra applicazione.
+# 🎬 Cine Circle – Frontend (`webapp-react`)
+> Frontend del progetto Cine Circle, un blog di cinema in stile retrò.
+     
+Questa repository contiene la parte **client-side** dell’applicazione, sviluppata con **React**, che consuma le API REST del backend (`webapp-express`) per visualizzare film, dettagli e recensioni.
 
 ---
 
-# Setup Web App React-Day Three
+## 🧩 Stack Tecnologico
 
-## Consegna
-
-### MILESTONE 1
-
-- Colleghiamo la lista dei movies a una pagina di dettaglio movie;
-- Effettuiamo una chiamata AJAX dalla pagina di dettaglio per ottenere il dettaglio di un singolo film, comprese le sue recensioni.
-
-### MILESTONE 2
-
-Rappresentiamo le informazioni del movie.
-
-## MILESTONE 3
-
-Creiamo un componente ReviewCard per rappresentare le informazioni delle recensioni.
-
-#### Bonus
-
-Rappresentiamo tutti i voti delle recensioni con un componente StarRating.
-
-#### Bonus Bonus
-
-- Sul backend, iniziamo a realizzare una rotta /movies/:id/reviews per aggiungere una nuova recensione;
-- Può restituire un semplice testo "Rotta per aggiungere una recensione".
+- **React.js** → struttura a componenti
+- **React Router DOM** → gestione del routing
+- **Axios** → comunicazione con il backend
+- **Bootstrap / CSS** → interfaccia e layout responsive
+- **Vite** → build tool e server di sviluppo
+- **dotenv** → gestione variabili d’ambiente
 
 ---
 
-# Setup Web App React-Day Four
+## 🏗️ Struttura del Progetto
 
-## Consegna
+```bash
+webapp-react/
+│
+├── components/              # Componenti riutilizzabili (card, form, navbar, ecc.)
+├── contexts/                # Gestione dello stato globale con Context API
+├── layouts/                 # Layout principale con Header e Footer
+├── pages/                   # Pagine principali (Home, Movies, Details, Add)
+├── src/
+│   ├── assets/              # Immagini e risorse statiche
+│   ├── App.jsx              # Definizione rotte principali
+│   ├── index.css            # Stili globali
+│   └── main.jsx             # Inizializzazione app
+│
+├── index.html               # Entry point Vite
+├── package.json
+└── README.md
 
-### MILESTONE 2 (FRONTEND)
+```
 
-- Creiamo un componente che contenga il form per le recensioni;
-- Inseriamo questo componente nella pagina di dettaglio del film;
-- All’invio del form, la nuova recensione viene salvata sul database e visualizzata nella pagina, in fondo alle altre.
+## ⚙️ Setup del progetto
 
-Per la **MILESTONE 1(BACKEND)** e il **bonus** vi rimando al README della repositoy `webapp-express`.
+1️⃣ Clona la repository
+```bash
+git clone https://github.com/giorgiameffe/webapp-react.git
+cd webapp-react
+```
 
-# Setup Web App React-Day Five
+2️⃣ Installa le dipendenze
+```bash
+npm install
+```
 
-## Consegna
+3️⃣ Avvia il server di sviluppo
+```bash
+npm run dev
+```
 
-- Concludiamo migliorando l’esperienza sulla nostra SPA, inserendo un loader;
-- Creiamo un componente loader;
-- Questo componente deve poter apparire su qualunque pagina della nostra app;
-- Creiamo e sfruttiamo un Context per dare la possibilità ad ogni componente di attivare o disattivare il loader sulla propria pagina.
+L’applicazione sarà disponibile su [`http://localhost:5173`](http://localhost:5173).
 
-### Bonus
+💡 Assicurati che il backend (webapp-express) sia in esecuzione prima di accedere alle pagine che richiedono dati (es. Movies o Details).
 
-Personalizziamo l’aspetto della nostra app col CSS.
+---
+
+## 🔗 Rotte principali
+
+| Percorso        | Pagina               | Descrizione                                  |
+| --------------- | ------------------------- | -------------------------------------------- |
+| `/`             | `Homepage`                | Pagina iniziale con introduzione al progetto |
+| `/movies`       | `Movies`              | Elenco dei film con ricerca e filtri         |
+| `/movies/:slug` | `MovieDetails`        | Dettagli di un singolo film e recensioni     |
+| `/movies/new`   | `AddMoviePage`            | Form per aggiungere un nuovo film            |
+| `*`             | `NotFoundPage` | Pagina non trovata                 |
+
+---
+
+## 📸 Screenshot
+
+### 💻 Modalità Desktop
+
+![Movies versione desktop](./src/assets/img-screenshots/movies-desktop.png)
+
+### 📱 Modalità Tablet
+
+![Movies versione tablet](./src/assets/img-screenshots/movies-tablet.png)
+
+### 📞 Modalità Mobile
+
+![Movies versione mobile](./src/assets/img-screenshots/movies-mobile.png)
+
+📷 Le immagini mostrano la piena responsività del layout, progettato per adattarsi in modo fluido a diverse dimensioni di schermo.
+
+---
+
+## 🧠 Funzionalità principali
+
+- Visualizzazione film e recensioni tramite API REST
+- Ricerca film per titolo, regista o descrizione
+- Aggiunta di nuovi film (con upload immagine gestito dal backend)
+- Creazione di recensioni per ciascun film
+- Layout responsive ottimizzato per desktop, tablet e mobile
+- Gestione globale dello stato “loading” con Context API
+- Gestione errori e pagine 404 personalizzate
+
+---
+
+## 🧰 Script disponibili
+
+| Comando           | Descrizione                           |
+| ----------------- | ------------------------------------- |
+| `npm run dev`     | Avvia l’ambiente di sviluppo con Vite |
+| `npm run build`   | Compila il progetto per la produzione |
+| `npm run preview` | Avvia un’anteprima locale della build |
+
+---
+
+## 🔗 Backend collegato
+
+Questo progetto comunica con il backend Express, disponibile qui:
+👉 [Cine Circle Backend](https://github.com/giorgiameffe/webapp-express).
+
+---
+
+## 👩‍💻 Autore
+**Giorgia Meffe**  
+Progetto personale realizzato con React.
