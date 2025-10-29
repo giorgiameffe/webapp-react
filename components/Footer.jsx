@@ -33,7 +33,7 @@ function Footer() {
                         <h4 className="mb-3 fw-bold yellow-color">Join our community of Movie Lovers!</h4>
                         <p className="fst-italic">Keep you informed about news and share your thoughts.</p>
                         <ul className="list-unstyled">
-                            <li>Via del Film, 12 – 00100 Rome</li>
+                            <li>Via della Querce, 24 – 00123 Rome, Italy</li>
                             <li>Tel: +39 06 1234 5678</li>
                         </ul>
                     </div>
