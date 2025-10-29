@@ -85,6 +85,8 @@ function AddMoviePage() {
                                 type="text"
                                 id="movie-director"
                                 name="director"
+                                value={formData.director}
+                                onChange={handleFormData}
                                 placeholder="Enter movie director"
                                 className="form-control fst-italic"
                             />
