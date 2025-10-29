@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import MoviesPage from "../pages/Movies.jsx";
-import MovieDetailsPage from "../pages/MovieDetails.jsx";
+import MoviesPage from "../pages/MoviesPage.jsx";
+import MovieDetailsPage from "../pages/MovieDetailsPage.jsx";
 import DefaultLayout from "../layouts/DefaultLayout.jsx";
 import GlobalContext from "../contexts/GlobalContext.js";
 import { useState } from "react";
