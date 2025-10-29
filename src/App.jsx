@@ -4,7 +4,7 @@ import MovieDetailsPage from "../pages/MovieDetails.jsx";
 import DefaultLayout from "../layouts/DefaultLayout.jsx";
 import GlobalContext from "../contexts/GlobalContext.js";
 import { useState } from "react";
-import NotFound from '../components/NotFound.jsx';
+import NotFoundPage from '../pages/NotFoundPage.jsx';
 import Homepage from "../pages/Homepage.jsx";
 import AddMoviePage from "../pages/AddMoviePage.jsx";
 
@@ -26,7 +26,7 @@ function App() {
             <Route path='/movies/:id' element={<MovieDetailsPage />} />
             <Route path="/movies/new" element={<AddMoviePage />} />
           </Route>
-          <Route path='*' element={<NotFound />} />
+          <Route path='*' element={<NotFoundPage />} />
         </Routes>
       </BrowserRouter>
     </GlobalContext.Provider>
